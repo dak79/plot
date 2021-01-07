@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Plot Library</title>
+    <meta charset="utf-8" />
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="plot();">
+    <h1>Interactive function plotter</h1>
+    <section id="plotSettings">
+        <label for="xMin">xMin value: <input type=number id="xMin" value=0 step=0.5 oninput="plot();"></label>
+        <p></p>
+        <label for="xMax">xMax value: <input type=number id="xMax" value=10 step=0.5 oninput="plot();"></label>
+        <p></p>
+        <label for="yMin">yMin value: <input type=number id="yMin" value=-1 step=0.5 oninput="plot();"></label>
+        <p></p>
+        <label for="yMax">yMax value: <input type=number id="yMax" value=1 step=0.5 oninput="plot();"></label>
+        <p></p>
+        <label for="color">Color value: <input type=color id="color" onchange="plot();"></label>
+        <p></p>
+        <label for="function">Function to plot: <input id="function" type="text" value="sin(x)" onchange="plot();"> </label>
+        <p></p>
+        <div class="checkbox-container">
+            <input type="checkbox" id="grid" checked onchange="plot();">
+            <label for="grid">Grid</label>
+        </div>
+        <p></p>
+        <button onclick="plot();"><b>Plot it!</b></button>
+        
+
+    </section>
+
+    <section id="plot">
+        <div id="myFunction"></div>
+    </section>
+
+</body>
+
+</html>

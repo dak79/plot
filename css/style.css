@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+section {
+  border:0.2em solid #265A6B;
+  border-radius: 2em;
+  box-shadow: 0.4em 0.4em 0.4em #D2E1E6;
+  float:left;
+  min-height:3em;
+  padding: 1em;
+  margin: 1em;
+  color: #265A6B;
+}
+
+#plotSettings {
+  width: 15em;
+  background-color: #D2E1E6;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+#plot {
+  width: 36em;
+  background-color:  #D2E1E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border: 0.2em solid #265A6B;
+  border-radius: 2em;
+  padding: 0.4em;
+}
+
+input#color {
+  border: none;
+  height: 2em;
+}
+h1 {
+  text-align: left;
+  color: #265A6B;
+  margin: 2em;
+}
+
+button {
+  border: 0.2em solid #265A6B;
+  border-radius: 2em;
+  color: #265A6B;
+  background-color: #D2E1E6;
+  justify-content: center;
+  padding: 0.4em;
+  outline: none;
+}
+
+button:hover {
+  color:white;
+  background-color: #265A6B;
+}
+
+input:focus {
+  color:white;
+  background-color: #265A6B;
+  outline: none;
+}
+
+#gridButton {
+  font-size: 0.8em;
+}
+.checkbox-container 
+{
+  display: flex;
+  text-align: center;
+}
+.checkbox-container label {
+  display: flex;
+  cursor: pointer;
+}
+.checkbox-container input[type="checkbox"]
+{
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+.checkbox-container label::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  border: 0.15em solid #265A6B;
+  border-radius: 0.35em;
+  margin-right: 0.3em;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  content: "\002713";
+  background-color: #265A6B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
